@@ -24,3 +24,5 @@ var Step1 = (
 );
 
 console.log(Step1);
+
+MiniReact.render(Step1, root);
