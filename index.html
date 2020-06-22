@@ -6,18 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MiniReact</title>
-
+    <!-- Transpile the code on the fly using Babel CDN or via local script folder -->
     <!-- <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
     <script type="text/javascript" src="./scripts/babel.min.js"></script>
 
     <link rel="stylesheet" href="./style/fontawesome/all.css" />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./style/app.css" />
 </head>
 
 <body>
+    <!-- The user interface will be mounted on the root element -->
     <div id="root"></div>
-
+     <!-- Anything written within "text/babel" or the referenced file
+     will be handled by the babel script that is loaded in the browser.
+     This transpilation from modern JS to ES5 happens on the browser 
+     For production, using webpack or any other build system like npm or 
+     gulp is recommended for transpiling before deployment. -->
     <script type="text/babel" src="./lib/dom/dom.js"></script>
+    <!-- Sample application to test the library  -->
     <script type="text/babel" src="./todo-app.js"></script>
 
 </body>
