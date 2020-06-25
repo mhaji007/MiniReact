@@ -15,7 +15,7 @@
 
 const root = document.getElementById("root");
 
-// Sample jsx code to test whether the jsx is correctly transpiled to equivalent MiniReact element
+// Virtual DOM element. Sample jsx code to test whether the jsx is correctly transpiled to equivalent MiniReact element
 // jsx representation of the real DOM to be created
 var Step1 = (
     <div>
@@ -37,3 +37,23 @@ var Step1 = (
 console.log(Step1);
 
 MiniReact.render(Step1, root);
+
+
+var Step2 = (
+    <div>
+      <h1 className="header">Hello Tiny React!</h1>
+      <h2>(coding nirvana)</h2>
+      <div>nested 1<div>nested 1.1</div></div>
+      <h3 style="background-color:yellow">(OBSERVE: I said it!!)</h3>
+      {2 == 1 && <div>Render this if 2==1</div>}
+      {2 == 2 && <div>{2}</div>}
+      <span>Something goes here...</span>
+      <button onClick={() => alert("This has changed!")}>Click me!</button>
+    </div>
+  );
+
+  setTimeout(() => {
+      alert("Re-rendering...");
+      MiniReact.render(Step2, root)
+      
+  }, 4000);
