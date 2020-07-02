@@ -36,7 +36,7 @@ var Step1 = (
 // transpiled code is used here
 console.log(Step1);
 
-MiniReact.render(Step1, root);
+// MiniReact.render(Step1, root);
 
 
 var Step2 = (
@@ -52,8 +52,12 @@ var Step2 = (
     </div>
   );
 
-  setTimeout(() => {
-      alert("Re-rendering...");
-      MiniReact.render(Step2, root)
+//   setTimeout(() => {
+//       alert("Re-rendering...");
+//       MiniReact.render(Step2, root)
       
-  }, 4000);
+//   }, 4000);
+
+const Heart = () => <span>&hearts;</span>;
+
+MiniReact.render(<Heart/>, root);
